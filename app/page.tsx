@@ -48,7 +48,7 @@ export default function Home() {
               marginBottom: "20px",
             }}
           >
-            SoulFashion
+            SoulFashion Store
           </h1>
 
           <p style={{ fontSize: "24px" }}>
