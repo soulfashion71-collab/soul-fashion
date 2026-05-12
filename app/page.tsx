@@ -1,135 +1,148 @@
 export default function Home() {
   return (
-    <main style={{ fontFamily: "Arial, sans-serif" }}>
-      
-      {/* NAVBAR */}
-      <nav
-        style={{
-          display: "flex",
-          justifyContent: "space-between",
-          padding: "20px 60px",
-          alignItems: "center",
-          background: "white",
-          position: "sticky",
-          top: 0,
-        }}
-      >
-        <h1 style={{ fontSize: "32px", fontWeight: "bold" }}>
-          SoulFashion
-        </h1>
+    <main className="bg-white text-black">
 
-        <div style={{ display: "flex", gap: "25px" }}>
-          <p>Men</p>
-          <p>Women</p>
-          <p>New Arrivals</p>
-          <p>Collections</p>
+      {/* NAVBAR */}
+      <nav className="fixed top-0 left-0 w-full bg-white/90 backdrop-blur-md shadow-sm z-50">
+        <div className="max-w-7xl mx-auto flex justify-between items-center px-10 py-5">
+          
+          <h1 className="text-3xl font-bold tracking-wide">
+            SoulFashion
+          </h1>
+
+          <div className="flex gap-10 text-lg font-medium">
+            <a href="#" className="hover:text-gray-500 transition">
+              Men
+            </a>
+
+            <a href="#" className="hover:text-gray-500 transition">
+              Women
+            </a>
+
+            <a href="#" className="hover:text-gray-500 transition">
+              New Arrivals
+            </a>
+
+            <a href="#" className="hover:text-gray-500 transition">
+              Collections
+            </a>
+          </div>
         </div>
       </nav>
 
       {/* HERO SECTION */}
       <section
+        className="h-screen bg-cover bg-center flex items-center"
         style={{
-          height: "90vh",
           backgroundImage:
             "url('https://images.unsplash.com/photo-1441986300917-64674bd600d8?q=80&w=2070')",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          display: "flex",
-          alignItems: "center",
-          padding: "60px",
-          color: "white",
         }}
       >
-        <div>
-          <h1
-            style={{
-              fontSize: "70px",
-              fontWeight: "bold",
-              marginBottom: "20px",
-            }}
-          >
-            SoulFashion Store
-          </h1>
+        <div className="bg-black/40 w-full h-full flex items-center">
+          <div className="px-16 text-white">
 
-          <p style={{ fontSize: "24px" }}>
-            Elevate Your Style
-          </p>
+            <h1 className="text-7xl font-bold mb-6 leading-tight">
+              SoulFashion <br /> Premium Store
+            </h1>
 
-          <button
-            style={{
-              marginTop: "30px",
-              padding: "14px 30px",
-              fontSize: "18px",
-              border: "none",
-              background: "black",
-              color: "white",
-              cursor: "pointer",
-            }}
-          >
-            Shop Now
-          </button>
+            <p className="text-2xl mb-8">
+              Elevate Your Style With Luxury Fashion
+            </p>
+
+            <button className="bg-white text-black px-8 py-4 text-lg font-semibold hover:bg-gray-200 transition duration-300">
+              Shop Now
+            </button>
+
+          </div>
         </div>
       </section>
 
-      {/* CATEGORY SECTION */}
-      <section style={{ padding: "70px 60px" }}>
-        <h2 style={{ fontSize: "40px", marginBottom: "40px" }}>
-          Shop Categories
+      {/* COLLECTION SECTION */}
+      <section className="py-24 px-10">
+        <h2 className="text-5xl font-bold text-center mb-16">
+          Featured Collections
         </h2>
 
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(3,1fr)",
-            gap: "25px",
-          }}
-        >
-          <div
-            style={{
-              background: "#f5f5f5",
-              padding: "60px",
-              textAlign: "center",
-              fontSize: "24px",
-            }}
-          >
-            Mens&apos;Fashion
+        <div className="grid md:grid-cols-3 gap-10">
+
+          <div className="group overflow-hidden rounded-2xl shadow-lg">
+            <img
+              src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?q=80&w=800"
+              className="h-[500px] w-full object-cover group-hover:scale-110 transition duration-500"
+            />
+
+            <div className="p-6">
+              <h3 className="text-2xl font-semibold mb-2">
+                Mens Wear
+              </h3>
+
+              <p className="text-gray-600">
+                Premium outfits for modern men.
+              </p>
+            </div>
           </div>
 
-          <div
-            style={{
-              background: "#f5f5f5",
-              padding: "60px",
-              textAlign: "center",
-              fontSize: "24px",
-            }}
-          >
-            Womens&apos; Fashion
+          <div className="group overflow-hidden rounded-2xl shadow-lg">
+            <img
+              src="https://images.unsplash.com/photo-1496747611176-843222e1e57c?q=80&w=800"
+              className="h-[500px] w-full object-cover group-hover:scale-110 transition duration-500"
+            />
+
+            <div className="p-6">
+              <h3 className="text-2xl font-semibold mb-2">
+                Womens Wear
+              </h3>
+
+              <p className="text-gray-600">
+                Elegant fashion for every occasion.
+              </p>
+            </div>
           </div>
 
-          <div
-            style={{
-              background: "#f5f5f5",
-              padding: "60px",
-              textAlign: "center",
-              fontSize: "24px",
-            }}
-          >
-            Accessories
+          <div className="group overflow-hidden rounded-2xl shadow-lg">
+            <img
+              src="https://images.unsplash.com/photo-1523170335258-f5ed11844a49?q=80&w=800"
+              className="h-[500px] w-full object-cover group-hover:scale-110 transition duration-500"
+            />
+
+            <div className="p-6">
+              <h3 className="text-2xl font-semibold mb-2">
+                Accessories
+              </h3>
+
+              <p className="text-gray-600">
+                Watches, bags and premium accessories.
+              </p>
+            </div>
           </div>
+
         </div>
+      </section>
+
+      {/* BANNER */}
+      <section className="bg-black text-white py-24 text-center">
+        <h2 className="text-6xl font-bold mb-6">
+          New Season Arrivals
+        </h2>
+
+        <p className="text-xl mb-8">
+          Discover luxury fashion collections.
+        </p>
+
+        <button className="bg-white text-black px-8 py-4 text-lg font-semibold hover:bg-gray-300 transition">
+          Explore Collection
+        </button>
       </section>
 
       {/* FOOTER */}
-      <footer
-        style={{
-          background: "black",
-          color: "white",
-          padding: "40px",
-          textAlign: "center",
-        }}
-      >
-        <h2>SoulFashion</h2>
-        <p>Premium Fashion Brand</p>
+      <footer className="bg-gray-100 py-10 text-center">
+        <h2 className="text-3xl font-bold mb-3">
+          SoulFashion
+        </h2>
+
+        <p className="text-gray-600">
+          Premium Fashion Brand © 2026
+        </p>
       </footer>
     </main>
   );
